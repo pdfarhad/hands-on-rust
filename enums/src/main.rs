@@ -1,10 +1,10 @@
 // To suppress warnings about unused enum variants. We can annotate variants with #[allow(dead_code)] 
 
 fn main() {
-    demo_simple_enums();
-    // demo_enum_with_data();
-    // demo_using_option_enum();
-    // demo_using_result_enum(String::from("98765"));
+    example_simple_enums();
+    // example_enum_with_data();
+    // example_using_option_enum();
+    // example_using_result_enum(String::from("98765"));
 }
 
 enum TrafficLight {
@@ -13,9 +13,9 @@ enum TrafficLight {
     Yellow
 }
 
-fn demo_simple_enums() {
+fn example_simple_enums() {
 
-    println!("Demo simple enums");
+    println!("example simple enums");
 
     let c: TrafficLight = TrafficLight::Red;   
     match c {
@@ -40,9 +40,9 @@ enum Address {
 }
 
 
-fn demo_enum_with_data() {
+fn example_enum_with_data() {
 
-    println!("\nDemo enums with data");
+    println!("\nexample enums with data");
 
     let h: Address = Address::Number(4);
     match h {
@@ -56,9 +56,9 @@ fn demo_enum_with_data() {
 
 }
 
-fn demo_using_option_enum() {
+fn example_using_option_enum() {
     
-    println!("\nDemo using the Option<T> enum");
+    println!("\nexample using the Option<T> enum");
     
     // Rust defines a standard enum Option<T> as follows:
     // enum Option<T> {
@@ -81,9 +81,9 @@ fn demo_using_option_enum() {
     // println!("My fav num  name is {}", favnum.unwrap_or(42));
 }
 
-fn demo_using_result_enum(s: String) {
+fn example_using_result_enum(s: String) {
     
-    println!("\nDemo using the Result<T, E> enum");
+    println!("\nexample using the Result<T, E> enum");
 
     // Rust defines a standard enum Result<T, Err> as follows:
     // enum Result<T, E> {
