@@ -3,9 +3,13 @@ fn main() {
 	// example_string_type();
 	// example_copying_vs_moving();
 	// example_clone();
+	
+	// let x = example_scope();
+	// println!("x {}", x);
+
 }
 
-fn example_scope() {
+fn example_scope() -> i32 {
 	
 	let x = 99;
 
@@ -13,17 +17,17 @@ fn example_scope() {
 		let s = "Farhad";
 		println!("s {}", s);
 	}
-	
+	x
 	// Nope:
 	// println!("s {}", s);
 }
 
-fn example_string_type() {
+fn example_string_type() -> String{
 	
 	let mut s = String::from("Hello");
 	s.push_str(" Bangladesh");
-	println!("s {}", s)
-
+	println!("s {}", s);
+	s
 }   // s goes out of scope here, so drop() is called on the String s (because String implements the Drop trait).
 
 fn example_copying_vs_moving() {
