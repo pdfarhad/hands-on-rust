@@ -81,6 +81,7 @@ fn example_loops() {
     //     std::thread::sleep(std::time::Duration::from_secs(1));
     // }
 
+    // while loop
     println!("\nUsing a while loop");
     let mut i = 0;
     while i < 10 {
@@ -88,16 +89,19 @@ fn example_loops() {
         i += 1;
     }
 
+    // for loop over a range
     println!("\nUsing a for loop over a range (inclusive lower bound, exclusive upper bound)");
     for i in 0..10 {
         println!("{}", i);
     }
 
+    // for loop over a range including upper bound
     println!("\nUsing a for loop over a range (inclusive lower bound, inclusive upper bound)");
     for i in 0..=10 {
         println!("{}", i);
     }
 
+    // for loop iterating over an array
     println!("\nUsing a for loop over an array");
     let arr = [99, 55, 95, 100, 82];
     for elem in arr {
